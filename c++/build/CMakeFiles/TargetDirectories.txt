@@ -1,8 +1,0 @@
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/CMakeFiles/rebuild_cache.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/CMakeFiles/edit_cache.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms/CMakeFiles/rebuild_cache.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms/CMakeFiles/edit_cache.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms/CMakeFiles/algorithms.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/application/CMakeFiles/rebuild_cache.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/application/CMakeFiles/edit_cache.dir
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/application/CMakeFiles/application.dir
