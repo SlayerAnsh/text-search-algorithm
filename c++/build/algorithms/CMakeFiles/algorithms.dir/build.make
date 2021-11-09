@@ -89,17 +89,32 @@ algorithms/CMakeFiles/algorithms.dir/bruteforce.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/bruteforce.cpp.s"
 	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/bruteforce.cpp -o CMakeFiles/algorithms.dir/bruteforce.cpp.s
 
+algorithms/CMakeFiles/algorithms.dir/kmp.cpp.o: algorithms/CMakeFiles/algorithms.dir/flags.make
+algorithms/CMakeFiles/algorithms.dir/kmp.cpp.o: ../algorithms/kmp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object algorithms/CMakeFiles/algorithms.dir/kmp.cpp.o"
+	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algorithms.dir/kmp.cpp.o -c /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/kmp.cpp
+
+algorithms/CMakeFiles/algorithms.dir/kmp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algorithms.dir/kmp.cpp.i"
+	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/kmp.cpp > CMakeFiles/algorithms.dir/kmp.cpp.i
+
+algorithms/CMakeFiles/algorithms.dir/kmp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/kmp.cpp.s"
+	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/kmp.cpp -o CMakeFiles/algorithms.dir/kmp.cpp.s
+
 # Object files for target algorithms
 algorithms_OBJECTS = \
-"CMakeFiles/algorithms.dir/bruteforce.cpp.o"
+"CMakeFiles/algorithms.dir/bruteforce.cpp.o" \
+"CMakeFiles/algorithms.dir/kmp.cpp.o"
 
 # External object files for target algorithms
 algorithms_EXTERNAL_OBJECTS =
 
 lib/libalgorithms.a: algorithms/CMakeFiles/algorithms.dir/bruteforce.cpp.o
+lib/libalgorithms.a: algorithms/CMakeFiles/algorithms.dir/kmp.cpp.o
 lib/libalgorithms.a: algorithms/CMakeFiles/algorithms.dir/build.make
 lib/libalgorithms.a: algorithms/CMakeFiles/algorithms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../lib/libalgorithms.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../lib/libalgorithms.a"
 	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms && $(CMAKE_COMMAND) -P CMakeFiles/algorithms.dir/cmake_clean_target.cmake
 	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build/algorithms && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/algorithms.dir/link.txt --verbose=$(VERBOSE)
 

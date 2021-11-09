@@ -1,0 +1,2 @@
+KMP Iterations: 14
+Found Results at: 0 3 7 11 

@@ -1,125 +1,47 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 /**
  * Basic of Knuth Moris Pratt [ KMP ]
- * whenever we detect a mismatch (after some matches), 
- * we already know some of the characters in the text of the next window. 
- * We take advantage of this information to avoid matching the characters that we know will anyway match.
- * 
+ * whenever we detect a mismatch (after some matches),
+ * we already know some of the characters in the text of the next window.
+ * We take advantage of this information to avoid matching the characters that
+ * we know will anyway match.
+ *
  * Time Complexity : O(n)
  */
-class KMP{
-    int iterations;
-    string patt;
-    string text;
 
-    public:
+#pragma once
 
-        //constructor
-        KMP(){
-            iterations = 0;
-            patt = "";
-            text = "";
-        }
+#include <iostream>
+#include <string.h>
+#include <vector>
 
-        KMP(string p, string t){
-            iterations = 0;
-            patt = p;
-            text = t;
-        }
+namespace ALGORITHMS {
+namespace KMP {
 
-        void KMPSearch(){
-            KMPSearch(patt, text);
-            return;
-        }
+typedef uint64_t myint;
 
-        void KMPSearch(string pattern, string txt)
-        {
-            patt = pattern;
-            text = txt;
+class KMP
+{
+public:
+    KMP(std::string &text, std::string &pattern);
+    ~KMP();
 
+private:
+    myint iterations = 0;              // Number of Iteraations
+    std::string text;                  // Document to Search
+    std::string pattern;               // Search Text
+    std::vector<myint> lps;            // Longest Proper Prefix and Suffix
+    std::vector<myint> search_indexes; // Result Search Indexes
 
-            int M = pattern.length();
-            int N = txt.length();
+public:
+    void search(); // Main Search Function which implement Kmp
+    void reset();  // Reset Iterations and Result
 
-            /**
-             * Lps - refers to longest proper prefix here
-             * 
-             * */
+public:
+    std::vector<myint> getSearchIndexes() { return search_indexes; }
+    myint getIterations() { return iterations; }
 
-            int lps[M];
-
-            // Preprocess the patterntern (calculate lps[] array)
-            computeLPSArray(pattern, M, lps);
-
-            int i = 0; // index for txt[]
-            int j = 0; // index for pattern[]
-            while (i < N) {
-                // iterations++;
-                if (pattern[j] == txt[i]) {
-                    j++;
-                    i++;
-                }
-
-                if (j == M) {
-                    printf("Found patterntern at index %d ", i - j);
-                    j = lps[j - 1];
-                }
-
-                // mismatch after j matches
-                else if (i < N && pattern[j] != txt[i]) {
-                    // Do not match lps[0..lps[j-1]] characters,
-                    // they will match anyway
-                    if (j != 0)
-                        j = lps[j - 1];
-                    else
-                        i = i + 1;
-                }
-            }
-        }
-
-         void computeLPSArray(string pattern, int M, int* lps)
-        {
-            // length of the previous longest prefix suffix
-            int len = 0;
-
-            lps[0] = 0; // lps[0] is always 0
-
-            // the loop calculates lps[i] for i = 1 to M-1
-            int i = 1;
-            while (i < M) {
-                if (pattern[i] == pattern[len]) {
-                    len++;
-                    lps[i] = len;
-                    i++;
-                }
-                else // (pattern[i] != pattern[len])
-                {
-                    if (len != 0) {
-                        len = lps[len - 1];
-                    }
-                    else // if (len == 0)
-                    {
-                        lps[i] = 0;
-                        i++;
-                    }
-                }
-            }
-        }
-
-        void show_iteration(){
-            cout<<"\nIteration for KMP is "<<iterations<<" when length of pattern is "<<patt.length()<<" and text size is "<<text.length() <<"\n";
-            return;
-        }
+private:
+    void computeLPSArray(); // Preprocess LPS
 };
-
-// int main()
-// {
-//     char txt[] = "ABABDABACDABABCABAB";
-//     char pat[] = "ABABCABAB";
-//     KMP k ;
-//     k.KMPSearch(pat, txt);
-//     k.show_iteration();
-//     return 0;
-// }
+} // namespace KMP
+} // namespace ALGORITHMS

@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-../algorithms/include/bruteforce.h
+../algorithms/include/kmp.h
+iostream
+-
+string.h
+-
+vector
+-
 
 /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/application/main.cpp
-bruteforce.h
-/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/application/bruteforce.h
+fstream
+/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/application/fstream
+kmp.h
+/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/application/kmp.h
 

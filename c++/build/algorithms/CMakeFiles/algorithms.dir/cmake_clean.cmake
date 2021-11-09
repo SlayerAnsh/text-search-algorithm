@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../lib/libalgorithms.a"
   "../lib/libalgorithms.pdb"
   "CMakeFiles/algorithms.dir/bruteforce.cpp.o"
+  "CMakeFiles/algorithms.dir/kmp.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -4,3 +4,6 @@
 algorithms/CMakeFiles/algorithms.dir/bruteforce.cpp.o
  ../algorithms/include/bruteforce.h
  /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/bruteforce.cpp
+algorithms/CMakeFiles/algorithms.dir/kmp.cpp.o
+ ../algorithms/include/kmp.h
+ /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/kmp.cpp

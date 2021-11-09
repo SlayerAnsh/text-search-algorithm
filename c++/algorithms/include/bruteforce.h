@@ -5,10 +5,8 @@ namespace ALGORITHMS {
 namespace BRUTEFORCE {
 
 class Bruteforce {
-private:
-  /* data */
 public:
-  Bruteforce(/* args */);
+  Bruteforce();
   ~Bruteforce();
 
 public:

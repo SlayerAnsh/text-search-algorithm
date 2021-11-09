@@ -171,6 +171,33 @@ bruteforce.cpp.s:
 	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build && $(MAKE) $(MAKESILENT) -f algorithms/CMakeFiles/algorithms.dir/build.make algorithms/CMakeFiles/algorithms.dir/bruteforce.cpp.s
 .PHONY : bruteforce.cpp.s
 
+kmp.o: kmp.cpp.o
+
+.PHONY : kmp.o
+
+# target to build an object file
+kmp.cpp.o:
+	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build && $(MAKE) $(MAKESILENT) -f algorithms/CMakeFiles/algorithms.dir/build.make algorithms/CMakeFiles/algorithms.dir/kmp.cpp.o
+.PHONY : kmp.cpp.o
+
+kmp.i: kmp.cpp.i
+
+.PHONY : kmp.i
+
+# target to preprocess a source file
+kmp.cpp.i:
+	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build && $(MAKE) $(MAKESILENT) -f algorithms/CMakeFiles/algorithms.dir/build.make algorithms/CMakeFiles/algorithms.dir/kmp.cpp.i
+.PHONY : kmp.cpp.i
+
+kmp.s: kmp.cpp.s
+
+.PHONY : kmp.s
+
+# target to generate assembly for a file
+kmp.cpp.s:
+	cd /home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/build && $(MAKE) $(MAKESILENT) -f algorithms/CMakeFiles/algorithms.dir/build.make algorithms/CMakeFiles/algorithms.dir/kmp.cpp.s
+.PHONY : kmp.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -183,6 +210,9 @@ help:
 	@echo "... bruteforce.o"
 	@echo "... bruteforce.i"
 	@echo "... bruteforce.s"
+	@echo "... kmp.o"
+	@echo "... kmp.i"
+	@echo "... kmp.s"
 .PHONY : help
 
 
