@@ -1,13 +1,11 @@
 # Set the project name
-project (algorithms)
+project (helper)
 
 # Add a library with the above sources
 add_library(${PROJECT_NAME}
- bruteforce.cpp
- kmp.cpp
- boyer-moore.cpp
+    print.cpp
 )
-add_library(lib::algorithms ALIAS ${PROJECT_NAME})
+add_library(lib::helper ALIAS ${PROJECT_NAME})
 
 target_include_directories( ${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/include

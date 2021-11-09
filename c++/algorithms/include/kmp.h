@@ -17,13 +17,13 @@
 namespace ALGORITHMS {
 namespace KMP {
 
-typedef uint64_t myint;
+typedef int64_t myint;
 
 class KMP
 {
 public:
     KMP(std::string &text, std::string &pattern);
-    ~KMP();
+    ~KMP(){};
 
 private:
     myint iterations = 0;              // Number of Iteraations
@@ -31,6 +31,8 @@ private:
     std::string pattern;               // Search Text
     std::vector<myint> lps;            // Longest Proper Prefix and Suffix
     std::vector<myint> search_indexes; // Result Search Indexes
+    double executionTime = 0;
+    double totalTime = 0;
 
 public:
     void search(); // Main Search Function which implement Kmp
@@ -39,6 +41,8 @@ public:
 public:
     std::vector<myint> getSearchIndexes() { return search_indexes; }
     myint getIterations() { return iterations; }
+    double getTotalTime() { return totalTime; }
+    double getExecutionTime() { return executionTime; }
 
 private:
     void computeLPSArray(); // Preprocess LPS

@@ -1,2 +1,12 @@
-KMP Iterations: 14
-Found Results at: 0 3 7 11 
+KMP Iterations: 110
+KMP Search Indexes: 
+KMP Moore Execution Time: 4045.000000(nano seconds)
+KMP Moore Total Time: 9864.000000(nano seconds)
+
+
+Boyer Moore Iterations: 189
+KMP Search Indexes: 
+Boyer Moore Execution Time: 6997.000000(nano seconds)
+Boyer Moore Total Time: 12301.000000(nano seconds)
+
+

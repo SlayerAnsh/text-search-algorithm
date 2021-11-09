@@ -1,6 +1,8 @@
 #include "kmp.h"
 
+#include <chrono>
 #include <string.h>
+using namespace std::chrono;
 
 using namespace ALGORITHMS::KMP;
 
@@ -12,11 +14,10 @@ KMP::KMP(std::string &text, std::string &pattern)
     computeLPSArray();
 }
 
-KMP::~KMP() {}
-
 void KMP::computeLPSArray()
 {
     lps.clear();
+    auto start = high_resolution_clock::now();
     lps.resize(pattern.length(), 0);
 
     // length of the previous longest prefix suffix
@@ -41,13 +42,20 @@ void KMP::computeLPSArray()
             }
         }
     }
+    auto stop = high_resolution_clock::now();
+    double duration = duration_cast<nanoseconds>(stop - start).count();
+    totalTime += duration;
 }
 
 void KMP::search()
 {
-    reset();
+    search_indexes.clear();
+    iterations = 0;
+
     myint M = pattern.length();
     const myint N = text.length();
+
+    auto start = high_resolution_clock::now();
 
     myint i = 0; // index for txt[]
     myint j = 0; // index for pattern[]
@@ -73,10 +81,16 @@ void KMP::search()
                 i = i + 1;
         }
     }
+
+    auto stop = high_resolution_clock::now();
+    executionTime = duration_cast<nanoseconds>(stop - start).count();
+    totalTime += executionTime;
 }
 
 void KMP::reset()
 {
     search_indexes.clear();
     iterations = 0;
+    executionTime = 0;
+    totalTime = 0;
 }
