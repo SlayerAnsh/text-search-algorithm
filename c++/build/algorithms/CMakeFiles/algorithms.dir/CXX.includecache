@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../algorithms/include/bruteforce.h
+
+/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/bruteforce.cpp
+bruteforce.h
+/home/anshudhar2001/Desktop/Repos/text-search-algorithms/c++/algorithms/bruteforce.h
+iostream
+-
+

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libalgorithms.a CMakeFiles/algorithms.dir/bruteforce.cpp.o
+/usr/bin/ranlib ../lib/libalgorithms.a
