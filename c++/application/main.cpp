@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "boyer-moore.h"
+#include "bruteforce.h"
 #include "fstream"
 #include "kmp.h"
 #include "print.h"
@@ -18,6 +19,24 @@ int main(int argc, char *argv[])
     std::cin.clear();
     std::getline(std::cin, pattern);
     std::cin.clear();
+
+    ALGORITHMS::BRUTEFORCE::Bruteforce brute(text, pattern);
+    brute.search();
+    std::cout << "BRUTEFORCE Iterations: " << brute.getIterations() << std::endl;
+    std::cout << "BRUTEFORCE Search Indexes: ";
+    HELPER::printSearchIndex(brute.getSearchIndexes());
+
+    std::cout << "BRUTEFORCE Moore Execution Time: ";
+    HELPER::printTimings(brute.getExecutionTime());
+    std::cout << std::endl;
+    std::cout << "BRUTEFORCE Moore Total Time: ";
+    HELPER::printTimings(brute.getTotalTime());
+    std::cout << std::endl;
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+
+    /*************************************************************/
 
     ALGORITHMS::KMP::KMP kmp(text, pattern);
     kmp.search();
@@ -41,7 +60,7 @@ int main(int argc, char *argv[])
     boyer_moore.search();
 
     std::cout << "Boyer Moore Iterations: " << boyer_moore.getIterations() << std::endl;
-    std::cout << "KMP Search Indexes: ";
+    std::cout << "Boyer Search Indexes: ";
     HELPER::printSearchIndex(boyer_moore.getSearchIndexes());
 
     std::cout << "Boyer Moore Execution Time: ";
