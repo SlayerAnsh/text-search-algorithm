@@ -1,0 +1,31 @@
+.
+├── algorithms
+│   ├── boyer-moore.cpp
+│   ├── bruteforce.cpp
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   ├── boyer-moore.h
+│   │   ├── bruteforce.h
+│   │   └── kmp.h
+│   └── kmp.cpp
+├── application
+│   ├── CMakeLists.txt
+│   └── main.cpp
+├── _clang-format
+├── CMakeLists.txt
+├── contributed
+│   ├── boyer-moore.cpp
+│   ├── brute
+│   ├── brute.cpp
+│   └── kmp.cpp
+├── helper
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   └── print.h
+│   └── print.cpp
+├── in.txt
+├── out.txt
+├── SampleInput.txt
+└── structure.txt
+
+6 directories, 22 files

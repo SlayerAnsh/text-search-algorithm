@@ -1,18 +1,18 @@
-BRUTEFORCE Iterations: 228
-BRUTEFORCE Search Indexes: 37 66 
-BRUTEFORCE Moore Execution Time: 10802.000000(nano seconds)
-BRUTEFORCE Moore Total Time: 10802.000000(nano seconds)
+BRUTEFORCE Iterations: 589
+BRUTEFORCE Search Indexes: 4 59 123 153 
+BRUTEFORCE Moore Execution Time: 26120.000000(nano seconds)
+BRUTEFORCE Moore Total Time: 26120.000000(nano seconds)
 
 
-KMP Iterations: 114
-KMP Search Indexes: 37 66 
-KMP Moore Execution Time: 6813.000000(nano seconds)
-KMP Moore Total Time: 10249.000000(nano seconds)
+KMP Iterations: 285
+KMP Search Indexes: 4 59 123 153 
+KMP Moore Execution Time: 14475.000000(nano seconds)
+KMP Moore Total Time: 17738.000000(nano seconds)
 
 
-Boyer Moore Iterations: 195
-Boyer Search Indexes: 37 66 
-Boyer Moore Execution Time: 9580.000000(nano seconds)
-Boyer Moore Total Time: 13868.000000(nano seconds)
+Boyer Moore Iterations: 161
+Boyer Search Indexes: 4 59 123 153 
+Boyer Moore Execution Time: 11492.000000(nano seconds)
+Boyer Moore Total Time: 15627.000000(nano seconds)
 
 
